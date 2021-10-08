@@ -4,7 +4,7 @@ from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=80)
 
     def __str__(self):
         return self.name
@@ -17,7 +17,7 @@ class Category(models.Model):
 
 
 class Location(models.Model):
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=80)
 
     @classmethod
     def get_locations(cls):
@@ -40,9 +40,9 @@ class Location(models.Model):
 
 class Image(models.Model):
     image = CloudinaryField('image')
-    name = models.CharField(max_length=60)
+    name = models.CharField(max_length=80)
     description = models.TextField()
-    author = models.CharField(max_length=40, default='admin')
+    author = models.CharField(max_length=70, default='admin')
     date = models.DateTimeField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     location = models.ForeignKey(Location, on_delete=models.CASCADE)

@@ -26,6 +26,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-t*qm+%t1y^uvq%gdx!j=9-&)cnd$nd9h-z(r@uk)=#=rmd06$*'
 
+
+# setup cloudinary credentials for django-cloudinary
+cloudinary.config(
+cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),  
+api_key = os.environ.get('CLOUDINARY_API_KEY'),  
+api_secret = os.environ.get('CLOUDINARY_API_SECRET')  
+)
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -42,6 +51,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gallery',
+    'cloudinary_storage',
     'cloudinary',
     'bootstrap4',
 ]
@@ -84,8 +94,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'artgallery',
-         'USER': 'moringa',
-    'PASSWORD':'Access',
+        'USER': 'moringa',
+        'PASSWORD':'Access',
     }
 }
 
@@ -133,10 +143,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#adding config
 
-cloudinary.config(
-  cloud_name = os.environ.get('wairish'),  
-  api_key = os.environ.get('522128638519833'),  
-  api_secret = os.environ.get('dL0_21o3ZFw2KGj0Xd6ca_9fKxg')  
-)
