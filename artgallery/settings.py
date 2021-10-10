@@ -15,6 +15,8 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 import os
+from decouple import config,Csv
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -28,11 +30,14 @@ SECRET_KEY = 'django-insecure-t*qm+%t1y^uvq%gdx!j=9-&)cnd$nd9h-z(r@uk)=#=rmd06$*
 
 
 # setup cloudinary credentials for django-cloudinary
+# setup cloudinary credentials for django-cloudinary
 cloudinary.config(
-cloud_name = os.environ.get('CLOUDINARY_CLOUD_NAME'),  
-api_key = os.environ.get('CLOUDINARY_API_KEY'),  
-api_secret = os.environ.get('CLOUDINARY_API_SECRET')  
+    cloud_name=config('CLOUDINARY_CLOUD_NAME'),
+    api_key=config('CLOUDINARY_API_KEY'),
+    api_secret=config('CLOUDINARY_API_SECRET'),
+    secure=True
 )
+
 
 
 # SECURITY WARNING: don't run with debug turned on in production!

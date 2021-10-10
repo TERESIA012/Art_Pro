@@ -1,10 +1,10 @@
 from django.db import models
-import cloudinary
+# import cloudinary
 from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
-    name = models.CharField(max_length=80)
+    name = models.CharField(max_length=80 , unique=True)
 
     def __str__(self):
         return self.name
@@ -17,7 +17,7 @@ class Category(models.Model):
 
 
 class Location(models.Model):
-    name = models.CharField(max_length=80)
+    name = models.CharField(max_length=80 ,unique=True)
 
     @classmethod
     def get_locations(cls):
@@ -75,5 +75,5 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    # class Meta:
-    #     ordering = ['date']
+    class Meta:
+        ordering = ['date']
