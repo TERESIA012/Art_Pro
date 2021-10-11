@@ -27,9 +27,9 @@
                         <div class="modal-body">
                             <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid">
                             <p class="text-center">{{image.description}}</p>
-                            <p class="image-location">Image Location ~ {{image.location}}</p>
-                            <p class="image-location">Image Category ~ {{image.category}}</p>
-                            <p class="image-location">Date Posted ~ {{ image.date }}</p>
+                            <p class="image-location"> <b>Location:</b> {{image.location}}</p>
+                            <p class="image-location"><b>Category:</b> {{image.category}}</p>
+                            <p class="image-location"> <b>Posted on:</b>{{ image.date }}</p>
                         </div>
                         <div class="modal-footer">
                             <input class="form-control input-lg" type="text" value="{{image.image.url}}" id="{{image.id}}.url">
