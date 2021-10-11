@@ -68,7 +68,7 @@ ____
 ### CONTACT
  Email :kingoriteresia@gmail.com
 
- ### LICENCE
- ### LICENSE
+ 
+### LICENSE
  . Under MIT LICENSE
 #### &copy;2021 Teresia King'ori.
