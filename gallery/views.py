@@ -12,15 +12,7 @@ def index(request):
 
 
 
-def search_location(request, location_id):
-    locations = Location.objects.all()
-    images = Image.objects.filter(location_id=location_id)
-    
-    location = Location.objects.get(id=location_id)
-    title = location
-    message = f"{location}"
-    # print(searched_media)
-    return render(request, 'gallery/location.html', {'images': images, 'locations': locations, 'message': message,'title':title})
+
 
 
 def search_results(request):

@@ -1,6 +1,9 @@
 body {
     background: black;
   }
+  h1{
+    color: orange;
+  }
   
   #formSearch {
     background: transparent;
