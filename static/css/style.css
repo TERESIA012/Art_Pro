@@ -30,3 +30,7 @@ body {
   .image-location {
     font-style: italic;
   }
+
+  nav{
+    background-color: black;
+  }
