@@ -70,5 +70,9 @@ ____
 
  
 ### LICENSE
- . Under MIT LICENSE
+
+<img src="./assets/screenshot1.png" alt="screenshot" />
+
+<img src="./assets/screenshot2.png" alt="screenshot" />
+
 #### &copy;2021 Teresia King'ori.
