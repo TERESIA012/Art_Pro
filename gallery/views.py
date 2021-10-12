@@ -13,7 +13,9 @@ def index(request):
 
 
 def get_image_location(request, location):
-    images = Image.filter_by_location(location)
+    # images = Image.filter_by_location(location)
+    images = Image.objects.filter(location_id=location)
+
     print(images)
     return render(request, 'gallery/location.html', {'location_images': images})
 
